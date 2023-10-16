@@ -12,6 +12,9 @@ function handleMenu(){
 function initPage(){
   const buttonMenu = document.getElementById('buttonMenu');
   buttonMenu.addEventListener('click', handleMenu)
+
+  const year = document.getElementById('year');
+  year.textContent = new Date().getFullYear()
 }
 
 window.addEventListener('load', initPage)
