@@ -1,4 +1,20 @@
-html, body, h1, h2, h3, h4, h5, h6, p, div, a, ul, li, span, nav, header{
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+a,
+ul,
+li,
+span,
+nav,
+header,
+section {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,8 +22,8 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, a, ul, li, span, nav, header{
 img {
   width: 100%;
 }
-body{
-  font-family: 'Courier New', Courier, monospace;
+body {
+  font-family: "Courier New", Courier, monospace;
 }
 
 h2 {
@@ -18,7 +34,7 @@ h2 {
 }
 
 /*Navegación*/
-.header{
+.header {
   width: 100%;
   height: auto;
   display: flex;
@@ -29,10 +45,9 @@ h2 {
   padding: 10px;
   background-color: #123142;
   z-index: 8;
-  ;
 }
 
-.nav{
+.nav {
   position: absolute;
   top: 0;
   right: 0;
@@ -46,7 +61,7 @@ h2 {
   z-index: 99;
 }
 
-.nav ul{
+.nav ul {
   list-style: none;
   display: none;
 }
@@ -54,7 +69,7 @@ h2 {
   padding-top: 15px;
   padding-bottom: 15px;
 }
-.nav ul a{
+.nav ul a {
   text-decoration: none;
   color: white;
   font-size: 24px;
@@ -82,18 +97,17 @@ h2 {
   transition: transform 1s linear;
 }
 
-
 /*animación menu*/
 .one {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
 .three {
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-fill-mode: forwards;
 }
 .two {
-  transition: opacity .25s linear;
+  transition: opacity 0.25s linear;
 }
 
 .close-menu .one {
@@ -117,85 +131,85 @@ h2 {
 }
 
 @keyframes animation-menu-open-one {
-  0%{
+  0% {
     transform: translateY(0px);
   }
-  50%{
+  50% {
     transform: translateY(13px);
   }
-  100%{
+  100% {
     transform: translateY(13px) rotate(48deg);
   }
 }
 @keyframes animation-menu-open-three {
-  0%{
+  0% {
     transform: translateY(0px);
   }
-  50%{
+  50% {
     transform: translateY(-14px);
   }
-  100%{
+  100% {
     transform: translateY(-14px) rotate(-48deg);
   }
 }
 @keyframes animation-menu-close-one {
-  0%{
+  0% {
     transform: translateY(13px) rotate(48deg);
   }
-  50%{
+  50% {
     transform: translateY(13px) rotate(0deg);
   }
-  100%{
+  100% {
     transform: translateY(0px);
   }
 }
 @keyframes animation-menu-close-three {
-  0%{
+  0% {
     transform: translateY(-14px) rotate(-48deg);
   }
-  50%{
+  50% {
     transform: translateY(-14px) rotate(0deg);
   }
-  100%{
+  100% {
     transform: translateY(0px);
   }
 }
 
-.open-menu .nav{ 
+.open-menu .nav {
   animation-name: open-nav;
   animation-duration: 500ms;
   animation-fill-mode: forwards;
 }
-.close-menu .nav{ 
+.close-menu .nav {
   animation-name: close-nav;
   animation-duration: 500ms;
   animation-fill-mode: backwards;
 }
 
 @keyframes open-nav {
-  0%{
+  0% {
     width: 5px;
     height: 5px;
   }
-  100%{
+  100% {
     width: 100%;
     height: 100vh;
     background-color: #00000095;
   }
 }
 @keyframes close-nav {
-  0%{
+  0% {
     width: 100%;
     height: 100vh;
     background-color: #00000090;
   }
-  100%{
+  100% {
     width: 5px;
     height: 5px;
   }
 }
 
-.open-menu .nav ul{
+.open-menu .nav ul {
   display: block;
 }
 
@@ -210,13 +224,13 @@ h2 {
   align-items: start;
 }
 
-.banner h1{
-  font-size: 45px;
+.banner h1 {
+  font-size: 40px;
   padding: 15px;
   color: white;
 }
 
-.banner p{
+.banner p {
   padding: 15px;
   font-size: 20px;
   line-height: 30px;
@@ -229,7 +243,7 @@ h2 {
 }
 
 /*Sobre mi*/
-.about{
+.about {
   margin: 150px 15px 50px;
   position: relative;
   z-index: -1;
@@ -266,7 +280,7 @@ h2 {
   margin-bottom: 25px;
 }
 
-.knowledge{
+.knowledge {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 5px;
@@ -274,7 +288,7 @@ h2 {
   font-weight: bold;
 }
 
-.knowledge div{
+.knowledge div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -283,11 +297,11 @@ h2 {
 
 .knowledge img {
   margin-bottom: 10px;
-  width: 60%;
+  width: 35%;
 }
 
 /*projects*/
-.projects{
+.projects {
   background-color: #123142;
   padding: 15px;
   z-index: -6;
@@ -297,7 +311,7 @@ h2 {
   color: white;
 }
 
-.container-projects{
+.container-projects {
   margin: auto;
 }
 
@@ -305,7 +319,7 @@ h2 {
   width: 100%;
   margin-top: 15px;
   margin-bottom: 15px;
-  transition: margin .5s linear;
+  transition: margin 0.5s linear;
   position: relative;
 }
 
@@ -314,8 +328,7 @@ h2 {
   height: 200px;
   object-fit: cover;
   object-position: center top;
-  transition: transform .5s linear;
-
+  transition: transform 0.5s linear;
 }
 
 .container-projects .card .info {
@@ -323,14 +336,14 @@ h2 {
   bottom: 0;
   color: white;
   opacity: 0;
-  transition: opacity .5s linear;
+  transition: opacity 0.5s linear;
   display: flex;
   width: 100%;
   flex-direction: column;
   align-items: center;
 }
 
-.container-projects .card .info div{
+.container-projects .card .info div {
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -365,14 +378,14 @@ h2 {
   margin: auto;
   text-align: center;
   width: 250px;
-} 
+}
 
 .container-projects .card:hover img {
   transform: translateY(-125px);
 }
 
 /*services*/
-.services{
+.services {
   padding: 15px;
   background-color: #3b657a;
 }
@@ -384,10 +397,7 @@ h2 {
 .services h3 {
   font-size: 20px;
   font-weight: 900;
-}
-
-.services p {
-  text-align: left;
+  text-wrap: balance;
 }
 
 .container-services {
@@ -398,9 +408,8 @@ h2 {
 .container-services div {
   text-align: center;
   margin-bottom: 15px;
-  padding: 15px 0;
-  background-color: white
-  ;
+  padding: 15px;
+  background-color: white;
 }
 
 .container-services img {
@@ -410,14 +419,24 @@ h2 {
 }
 
 .container-services p {
-  text-align: justify;
-  margin: 15px 15px 0;
+  text-align: left;
+  margin: 15px 15px;
 }
 
 /*contact*/
 .contact {
   margin: 30px 0;
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-img {
+  display: none;
+}
+
+.container-contact {
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -443,17 +462,152 @@ h2 {
   padding: 15px;
 }
 
-.container-contacts img{
+.container-contacts img {
   width: 100%;
   height: 100%;
 }
 
 /*footer*/
-footer{
+footer {
   background-color: #123142;
   padding: 25px 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
+}
+
+@media (min-width: 500px) {
+  .header {
+    padding: 15px 60px;
+  }
+  .banner h1 {
+    padding: 45px 60px 15px;
+  }
+  .banner p {
+    padding: 10px 60px;
+  }
+  .container-projects .card img {
+    height: 400px;
+  }
+  .banner img {
+    max-width: 500px;
+  }
+  .about {
+    margin: 150px 60px 50px;
+  }
+  .knowledge {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .projects,
+  .services,
+  .contact {
+    padding: 15px 60px;
+  }
+}
+
+@media (min-width: 768px) {
+  .banner img {
+    width: 50%;
+  }
+  .banner p {
+    width: 80%;
+  }
+  .knowledge {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .container-services {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  #contact-img {
+    display: block;
+    width: 50%;
+  }
+  .subcontainer-contact {
+    display: flex;
+  }
+  .container-contact {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 1024px) {
+  #buttonMenu{
+    display: none;
+  }
+  .nav {
+    position: initial;
+  }
+  .nav ul {
+    display: flex;
+    gap: 15px;
+  }
+  .nav ul a {
+    font-size: 20px;
+  }
+  .banner {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner p {
+    width: 90%;
+  }
+  .about p {
+    width: 80%;
+  }
+  .knowledge {
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .container-projects{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .container-projects .card img {
+    height: 250px;
+  }
+  #contact-img {
+    max-height: 400px;
+  }
+  .subcontainer-contact {
+    max-width: 1024px;
+    margin: auto;
+  }
+}
+@media (min-width: 1250px) {
+  .container {
+    width: 100%;
+    position: fixed;
+    height: 87px;
+    z-index: 7;
+    background: #123142;
+  }
+  .header{
+    width: 1250px;
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+  .container-banner {
+    width: 100%;
+    background: #123142;
+  }
+  .banner {
+    width: 1250px;
+    margin: auto;
+  }
+  .about {
+    width: 1250px;
+    margin: 150px auto 50px;
+  }
+  .container-services {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .contact {
+    width: 1250px;
+    margin: auto;
+  }
 }
