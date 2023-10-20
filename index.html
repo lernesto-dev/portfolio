@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="src/styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="favicon.ico" rel="icon"/>
     <title>Ernesto Dev</title>
+
+    <link rel="preload" href="favicon.ico" as="icon"/>
+    <link href="favicon.ico" rel="icon"/>
+
+    <link rel="preload" href="src/styles.css" as="style"/>
+    <link rel="stylesheet" href="src/styles.css" />
+
+    <link rel="preload" href="src/img/logo.png" as="image"/>
+    <link rel="preload" href="src/img/banner.svg" as="image"/>
+    
   </head>
   <body class="">
     <header class="container">
       <div class="header">
-        <img id="logo" src="src/img/logo.png" alt="logo" />
+        <img loading="lazy" id="logo" src="src/img/logo.png" alt="logo" />
         <div id="buttonMenu">
           <div class="line one"></div>
           <div class="line two"></div>
@@ -46,7 +54,7 @@
             porro quod harum magni
           </p>
         </div>
-        <img src="src/img/banner.svg" alt="imagen banner" />
+        <img loading="lazy" src="src/img/banner.svg" alt="imagen banner" />
       </div>
     </section>
     <section class="about" id="about">
@@ -63,59 +71,59 @@
         <h2>Conocimientos</h2>
         <div class="knowledge">
           <div>
-            <img src="src/img/html.png" alt="html" />
+            <img loading="lazy" src="src/img/html.png" alt="html" />
             HTML
           </div>
           <div>
-            <img src="src/img/css.png" alt="css" />
+            <img loading="lazy" src="src/img/css.png" alt="css" />
             CSS
           </div>
           <div>
-            <img src="src/img/js.png" alt="js" />
+            <img loading="lazy" src="src/img/js.png" alt="js" />
             JavaScript
           </div>
           <div>
-            <img src="src/img/php.png" alt="php" />
+            <img loading="lazy" src="src/img/php.png" alt="php" />
             PHP
           </div>
           <div>
-            <img src="src/img/react.png" alt="react" />
+            <img loading="lazy" src="src/img/react.png" alt="react" />
             React.js
           </div>
           <div>
-            <img src="src/img/node.png" alt="node" />
+            <img loading="lazy" src="src/img/node.png" alt="node" />
             Node.js
           </div>
           <div>
-            <img src="src/img/cshart.png" alt="cshart" />
+            <img loading="lazy" src="src/img/cshart.png" alt="cshart" />
             C#
           </div>
           <div>
-            <img src="src/img/java.png" alt="java" />
+            <img loading="lazy" src="src/img/java.png" alt="java" />
             Java
           </div>
           <div>
-            <img src="src/img/android.png" alt="android" />
+            <img loading="lazy" src="src/img/android.png" alt="android" />
             Android
           </div>
           <div>
-            <img src="src/img/react.png" alt="react native" />
+            <img loading="lazy" src="src/img/react.png" alt="react native" />
             React Native
           </div>
           <div>
-            <img src="src/img/firebase.png" alt="firebase" />
+            <img loading="lazy" src="src/img/firebase.png" alt="firebase" />
             Firebase
           </div>
           <div>
-            <img src="src/img/mysql.png" alt="mysql" />
+            <img loading="lazy" src="src/img/mysql.png" alt="mysql" />
             MySQL
           </div>
           <div>
-            <img src="src/img/git.png" alt="git" />
+            <img loading="lazy" src="src/img/git.png" alt="git" />
             Git
           </div>
           <div>
-            <img src="src/img/github.png" alt="github" />
+            <img loading="lazy" src="src/img/github.png" alt="github" />
             GitHub
           </div>
         </div>
@@ -125,7 +133,7 @@
       <h2>Proyectos</h2>
       <div class="container-projects">
         <div class="card">
-          <img
+          <img loading="lazy"
             src="src/img/proyectoBienesRaices.png"
             alt="Proyecto Bienes Raices"
           />
@@ -140,7 +148,7 @@
           </div>
         </div>
         <div class="card">
-          <img src="src/img/proyectoGato.png" alt="Proyecto Gato" />
+          <img loading="lazy" src="src/img/proyectoGato.png" alt="Proyecto Gato" />
           <div class="info">
             <h3>Juego del Gato</h3>
             <div><span>HTML</span><span>CSS</span><span>JS</span></div>
@@ -150,7 +158,7 @@
           </div>
         </div>
         <div class="card">
-          <img src="src/img/proyectoFestival.png" alt="Proyecto Festival" />
+          <img loading="lazy" src="src/img/proyectoFestival.png" alt="Proyecto Festival" />
           <div class="info">
             <h3>Página para festival</h3>
             <div><span>HTML</span><span>CSS</span><span>JS</span></div>
@@ -160,7 +168,7 @@
           </div>
         </div>
         <div class="card">
-          <img src="src/img/proyectoCafe.png" alt="Proyecto Cafe" />
+          <img loading="lazy" src="src/img/proyectoCafe.png" alt="Proyecto Cafe" />
           <div class="info">
             <h3>Blog de cafe</h3>
             <div><span>HTML</span><span>CSS</span><span>JS</span></div>
@@ -175,22 +183,22 @@
       <h2>Servicios</h2>
       <div class="container-services">
         <div>
-          <img src="src/img/website.svg" alt="web site" />
+          <img loading="lazy" src="src/img/website.svg" alt="web site" />
           <h3>Sitio web</h3>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa</p>
         </div>
         <div>
-          <img src="src/img/webplataform.svg" alt="web plataform" />
+          <img loading="lazy" src="src/img/webplataform.svg" alt="web plataform" />
           <h3>Plataforma web</h3>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa</p>
         </div>
         <div>
-          <img src="src/img/appmobile.svg" alt="app mobile" />
+          <img loading="lazy" src="src/img/appmobile.svg" alt="app mobile" />
           <h3>App movil</h3>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa</p>
         </div>
         <div>
-          <img src="src/img/developercustom.svg" alt="developer custom" />
+          <img loading="lazy" src="src/img/developercustom.svg" alt="developer custom" />
           <h3>Desarrollo personalizado</h3>
           <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa</p>
         </div>
@@ -199,7 +207,7 @@
     <section class="contact" id="contact">
       <h2>Empecemos</h2>
       <div class="subcontainer-contact">
-        <img id="contact-img" alt="imagen contacto" src="src/img/contact.svg" />
+        <img loading="lazy" id="contact-img" alt="imagen contacto" src="src/img/contact.svg" />
         <div class="container-contact">
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis
@@ -213,11 +221,11 @@
           />
           <div class="container-contacts">
             <a href="https://www.linkedin.com/in/lernesto" target="_blank"
-              ><img src="src/img/linkedIn.svg" alt="LinkedIn"
+              ><img loading="lazy" src="src/img/linkedIn.svg" alt="LinkedIn"
             /></a>
             <a
               href="mailto:contacto@lernesto.net?subject=Primer%20contacto&body=Quiero%20trabajar%20contigo"
-              ><img src="src/img/email.svg" alt="Email"
+              ><img loading="lazy" src="src/img/email.svg" alt="Email"
             /></a>
           </div>
         </div>
