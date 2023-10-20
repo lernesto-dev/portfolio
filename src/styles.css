@@ -61,6 +61,33 @@ h2 {
   z-index: 99;
 }
 
+#logo:hover {
+  animation: jello-diagonal 0.9s linear both;
+}
+@keyframes jello-diagonal {
+  0% {
+    transform: skew(0deg 0deg);
+  }
+  30% {
+    transform: skew(25deg 25deg);
+  }
+  40% {
+    transform: skew(-15deg, -15deg);
+  }
+  50% {
+    transform: skew(15deg, 15deg);
+  }
+  65% {
+    transform: skew(-5deg, -5deg);
+  }
+  75% {
+    transform: skew(5deg, 5deg);
+  }
+  100% {
+    transform: skew(0deg 0deg);
+  }
+}
+
 .nav ul {
   list-style: none;
   display: none;
@@ -74,6 +101,36 @@ h2 {
   color: white;
   font-size: 24px;
   cursor: pointer;
+}
+
+.nav ul li:hover {
+  animation: shake-left-right 0.8s linear both;
+}
+@keyframes shake-left-right {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+  10% {
+    transform: rotate(8deg);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotate(-10deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-8deg);
+  }
+  90% {
+    transform: rotate(8deg);
+  }
 }
 
 #buttonMenu {
@@ -246,7 +303,6 @@ h2 {
 .about {
   margin: 150px 15px 50px;
   position: relative;
-  z-index: -1;
 }
 
 .about p {
@@ -298,6 +354,35 @@ h2 {
 .knowledge img {
   margin-bottom: 10px;
   width: 35%;
+  animation: jello-horizontal 0.9s linear both;
+}
+
+.knowledge img:hover {
+  animation: step-start;
+}
+
+@keyframes jello-horizontal {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  65% {
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  75% {
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
 }
 
 /*projects*/
@@ -363,6 +448,7 @@ h2 {
   width: 0px;
   overflow: hidden;
   transition: width 1s linear 0.5s;
+  text-wrap: nowrap;
 }
 
 .container-projects .card:hover {
@@ -378,6 +464,7 @@ h2 {
   margin: auto;
   text-align: center;
   width: 250px;
+  height: 20px;
 }
 
 .container-projects .card:hover img {
@@ -412,6 +499,48 @@ h2 {
   background-color: white;
 }
 
+.container-services div:hover {
+  animation: bounce-top 0.9s linear both;
+}
+@keyframes bounce-top {
+  0% {
+    transform: translateY(-45px);
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(-24px);
+    animation-timing-function: ease-in;
+  }
+  65% {
+    transform: translateY(-12px);
+    animation-timing-function: ease-in;
+  }
+  82% {
+    transform: translateY(-6px);
+    animation-timing-function: ease-in;
+  }
+  93% {
+    transform: translateY(-4px);
+    animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+
 .container-services img {
   width: 200px;
   height: 200px;
@@ -442,6 +571,7 @@ h2 {
 }
 
 .btn-cv {
+  cursor: pointer;
   border: 1px solid #123142;
   padding: 15px 20px;
   margin: 25px auto;
@@ -467,6 +597,36 @@ h2 {
   height: 100%;
 }
 
+.container-contacts img:hover {
+  animation: shake-left-right 0.8s linear both;
+}
+
+@keyframes shake-left-right {
+  0%,
+  100% {
+    transform: rotate(0deg);
+    transform-origin: 50% 50%;
+  }
+  10% {
+    transform: rotate(8deg);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotate(-10deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: rotate(10deg);
+  }
+  80% {
+    transform: rotate(-8deg);
+  }
+  90% {
+    transform: rotate(8deg);
+  }
+}
 /*footer*/
 footer {
   background-color: #123142;
@@ -534,7 +694,7 @@ footer {
   }
 }
 @media (min-width: 1024px) {
-  #buttonMenu{
+  #buttonMenu {
     display: none;
   }
   .nav {
@@ -561,7 +721,7 @@ footer {
   .knowledge {
     grid-template-columns: repeat(7, 1fr);
   }
-  .container-projects{
+  .container-projects {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
@@ -585,7 +745,7 @@ footer {
     z-index: 7;
     background: #123142;
   }
-  .header{
+  .header {
     width: 1250px;
     margin: auto;
     left: 0;
