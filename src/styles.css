@@ -354,6 +354,7 @@ h2 {
 .knowledge img {
   margin-bottom: 10px;
   width: 35%;
+  height: auto;
   animation: jello-horizontal 0.9s linear both;
 }
 
@@ -684,6 +685,7 @@ footer {
   #contact-img {
     display: block;
     width: 50%;
+    height: auto;
   }
   .subcontainer-contact {
     display: flex;
@@ -763,8 +765,20 @@ footer {
     width: 1250px;
     margin: 150px auto 50px;
   }
+  .projects h2 {
+    max-width: 1250px;
+    margin: 0 auto 25px;
+  }
+  .container-projects {
+    max-width: 1250px;
+  }
+  .services h2 {
+    max-width: 1250px;
+    margin: 0 auto 25px;
+  }
   .container-services {
     grid-template-columns: repeat(4, 1fr);
+    max-width: 1250px;
   }
   .contact {
     width: 1250px;
