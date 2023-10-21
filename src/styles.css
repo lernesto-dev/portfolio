@@ -282,14 +282,19 @@ h2 {
 }
 
 .banner h1 {
-  font-size: 40px;
+  font-size: 35px;
+  margin-top: 100px;
   padding: 15px;
+  color: #376075;
+}
+
+.banner h1 span {
   color: white;
 }
 
 .banner p {
   padding: 15px;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 30px;
   color: white;
 }
@@ -549,7 +554,7 @@ h2 {
 }
 
 .container-services p {
-  text-align: left;
+  text-align: center;
   margin: 15px 15px;
 }
 
@@ -671,8 +676,12 @@ footer {
   .banner img {
     width: 50%;
   }
+  .banner h1 {
+    font-size: 60px;
+  }
   .banner p {
     width: 80%;
+    font-size: 20px;
   }
   .knowledge {
     grid-template-columns: repeat(6, 1fr);
