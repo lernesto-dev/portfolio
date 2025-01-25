@@ -1,7 +1,46 @@
 ---
+import ProjectCard from "./ProjectCard.astro";
 import TitleSection from "./TitleSection.astro";
+
+const projects = [
+  {
+    title: "Unsonu",
+    details:
+      "Landig page de una plataforma que te ayuda a visualizar todos tus archivos de tus diferentes nubes, en una sola plataforma de forma facil y rapida.",
+    img: import("../assets/unsonu.png"),
+    url: "https://unsonu.netlify.app",
+    showGithub: false,
+    github: "",
+    icons: ["astro", "html", "js", "css"],
+  },
+  {
+    title: "Bienes raices",
+    details:
+      "Proyecto de practica, de una plataforma en la cual se pueden publicar casas en venta y se comunican mediante un correo, con una pagina principal en la cual los clientes pueden ver las distintas casas que estan disponibles.",
+    img: import("../assets/bienesraices.png"),
+    url: "https://bienesraices.lernesto.net",
+    showGithub: true,
+    github: "https://github.com/lernesto-dev/bienesraices-mvc",
+    icons: ["php", "html", "js", "css"],
+  },
+];
 ---
 
 <section class="h-auto pt-20">
-    <TitleSection title="Proyectos" />
+  <TitleSection title="Proyectos" />
+  <div class="flex flex-col gap-16 w-full">
+    {
+      projects.map((project) => (
+        <ProjectCard
+          title={project.title}
+          details={project.details}
+          img={project.img}
+          url={project.url}
+          showGithub={project.showGithub}
+          github={project.github}
+          icons={project.icons}
+        />
+      ))
+    }
+  </div>
 </section>
