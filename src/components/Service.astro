@@ -1,0 +1,39 @@
+---
+import ServiceCard from "./ServiceCard.astro";
+import TitleSection from "./TitleSection.astro";
+
+const services = [
+  {
+    title: "Desarrollo Web",
+    img: "web",
+    details:
+      "Haz que tu negocio destaque en línea con una página web profesional y funcional.",
+  },
+  {
+    title: "Desarrollo Mobile",
+    img: "mobile",
+    details: "Lleva tu idea al siguiente nivel con una aplicación móvil intuitiva y funcional."
+  },
+  {
+    title: "Desarrollo Personalizado",
+    img: "custom",
+    details:
+      "¿Necesitas una solución única? Desarrollo sistemas y herramientas digitales a medida."
+  }
+];
+---
+
+<section class="h-auto pt-20">
+  <TitleSection title="Servicios" />
+  <div class="flex gap-16 w-full">
+    {
+        services.map((service) => (
+          <ServiceCard
+            title={service.title}
+            img={service.img}
+            details={service.details}
+          />
+        ))
+    }
+  </div>
+</section>

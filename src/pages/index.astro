@@ -1,23 +1,41 @@
 ---
-import Banner from '../components/Banner.astro';
-import Container from '../components/Container.astro';
-import Layout from '../layouts/Layout.astro';
-import Project from '../components/Project.astro';
-import Knowledge from '../components/Knowledge.astro';
-import '@fontsource/keania-one';
-import '@fontsource-variable/noto-sans-tc';
+import Banner from "../components/Banner.astro";
+import Container from "../components/Container.astro";
+import Layout from "../layouts/Layout.astro";
+import Project from "../components/Project.astro";
+import Knowledge from "../components/Knowledge.astro";
+import "@fontsource/keania-one";
+import "@fontsource-variable/noto-sans-tc";
+import Service from "../components/Service.astro";
 ---
+
 <Layout>
-	<Container>
-		<Banner />
-	</Container>
-	<Container h="h-auto">
-		<Project />
-	</Container>
-	<Container h="h-auto mt-20 mb-20">
-		<Knowledge />
-	</Container>
-	<Container h="h-auto mt-20 mb-20">
-		<p>I'm a front-end developer with a passion for creating user-friendly and accessible websites. I have experience working with React, Next.js, and Tailwind CSS. I also have a strong background in JavaScript and TypeScript.</p>
-	</Container>
+  <Container>
+    <Banner />
+  </Container>
+  <Container h="h-auto">
+    <Project />
+  </Container>
+  <Container h="h-auto mt-20 mb-20">
+    <Knowledge />
+  </Container>
+  <Container h="h-auto mt-20 mb-20">
+    <Service />
+  </Container>
+  <Container h="h-auto mt-20 mb-20">
+	
+  </Container>
+  <footer><p class="footer-text">Desarrollado por Luis Ernesto 2025</p></footer>
 </Layout>
+
+<style>
+  footer {
+    padding-bottom: 25px;
+  }
+  .footer-text {
+    font-family: "Keania One", sans-serif;
+    font-size: 16px;
+    text-align: center;
+    color: #f3f0ed;
+  }
+</style>
