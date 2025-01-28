@@ -1,0 +1,46 @@
+---
+import { Icon } from "astro-icon/components";
+const { bgColor, darkText, iconName, tooltip, bgColorTooltip, darkIcon } = Astro.props;
+---
+
+<div
+  class={`w-[60px] h-[60px] bg-[#F3F0ED] rounded-full flex justify-center items-center container-icon`}
+>
+  <div
+    class="relative overflow-hidden w-full h-full rounded-full flex justify-center items-center"
+  >
+    <div
+      class={`absolute bottom-0 left-0 w-full h-[0] ${bgColor} div-backfill`}
+    >
+    </div>
+    <Icon class={`icon z-[5] ${darkIcon ? 'dark-text' : ''}`} name={iconName} width={40} height={40} />
+  </div>
+  <div class={`absolute z-[-5] ${bgColorTooltip} tooltip ${darkText ? 'dark-text' : ''}`}>{tooltip}</div>
+</div>
+
+<style>
+  .container-icon:hover .div-backfill {
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+  }
+  .container-icon:hover .icon {
+    transition: all 0.3s ease-in-out;
+    color: #F3F0ED;
+  }
+  .tooltip {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.3s ease;
+    color: #F3F0ED;
+  }
+  .container-icon:hover .tooltip {
+    transform: translateY(-200%);
+    opacity: 1;
+    z-index: 10;
+    padding: 3px 10px;
+    border-radius: 5px;
+  }
+  .container-icon:hover .dark-text {
+    color: #000000;
+  }
+</style>

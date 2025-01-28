@@ -1,3 +1,7 @@
-<div class="max-w-[924px] h-full mx-auto">
+---
+const { h, extraClass } = Astro.props;
+---
+
+<div class={`max-w-[924px] mx-auto ${h !== undefined ? h : 'h-full'} ${extraClass}`}>
   <slot />
 </div>

@@ -1,0 +1,135 @@
+---
+import IconHover from "./IconHover.astro";
+import TitleSection from "./TitleSection.astro";
+
+const skills = [
+  {
+    name: "HTML",
+    color: "bg-[#E44D26]",
+    icon: "html",
+    darkText: false,
+    darkIcon: false,
+    colorTooltip: "bg-[#E44D26]",
+  },
+  {
+    name: "CSS",
+    color: "bg-[#2965F1]",
+    icon: "css",
+    darkText: false,
+    darkIcon: false,
+    colorTooltip: "bg-[#2965F1]",
+  },
+  {
+    name: "Javascript",
+    color: "bg-[#F7DF1E]",
+    icon: "js",
+    darkText: true,
+    darkIcon: true,
+    colorTooltip: "bg-[#F7DF1E]",
+  },
+  {
+    name: "PHP",
+    color: "bg-[#777BB4]",
+    icon: "php",
+    darkText: false,
+    darkIcon: false,
+    colorTooltip: "bg-[#777BB4]",
+  },
+  {
+    name: "React",
+    color: "bg-[#58C4DC]",
+    icon: "react",
+    darkText: true,
+    darkIcon: true,
+    colorTooltip: "bg-[#58C4DC]",
+  },
+  {
+    name: "Node",
+    color: "bg-[#339933]",
+    icon: "node",
+    darkText: false,
+    darkIcon: false,
+    colorTooltip: "bg-[#339933]",
+  },
+  {
+    name: "Java",
+    color: "bg-[#5382A1]",
+    icon: "java",
+    darkText: false,
+    darkIcon: false,
+    colorTooltip: "bg-[#5382A1]",
+  },
+  {
+    name: "Android",
+    color: "bg-[#3DDC84]",
+    icon: "android",
+    darkText: true,
+    darkIcon: true,
+    colorTooltip: "bg-[#3DDC84]",
+  },
+  {
+    name: "React Native",
+    color: "bg-[#20232A]",
+    icon: "react",
+    darkText: false,
+    darkIcon: false,
+    colorTooltip: "bg-[#20232A]",
+  },
+  {
+    name: "Firebase",
+    color: "bg-[#FFCA28]",
+    icon: "firebase",
+    darkText: true,
+    darkIcon: true,
+    colorTooltip: "bg-[#FFCA28]",
+  },
+  {
+    name: "MySQL",
+    color: "bg-[#00618A]",
+    icon: "mysql",
+    darkText: false,
+    darkIcon: false,
+    colorTooltip: "bg-[#00618A]",
+  },
+  {
+    name: "Git",
+    color: "bg-[#F05032]",
+    icon: "git",
+    darkText: false,
+    colorTooltip: "bg-[#F05032]",
+  },
+  {
+    name: "Github",
+    color: "bg-[#181717]",
+    icon: "github",
+    darkText: false,
+    darkIcon: false,
+    colorTooltip: "bg-[#181717]",
+  },
+  {
+    name: "Astro",
+    color: "bg-[#2B2D42]",
+    icon: "astro",
+    darkText: false,
+    colorTooltip: "bg-[#2B2D42]"
+  }
+];
+---
+
+<section class="h-auto pt-20">
+  <TitleSection title="Conocimientos" />
+  <div class="grid grid-cols-7 gap-16 w-full justify-center items-center">
+    {
+      skills.map((skill) => (
+        <IconHover
+          bgColor={skill.color}
+          darkText={skill.darkText}
+          iconName={skill.icon}
+          darkIcon={skill.darkIcon}
+          tooltip={skill.name}
+          bgColorTooltip={skill.colorTooltip}
+        />
+      ))
+    }
+  </div>
+</section>
