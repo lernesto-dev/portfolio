@@ -1,0 +1,50 @@
+---
+import { Icon } from "astro-icon/components";
+import TitleSection from "./TitleSection.astro";
+import ButtonLinkIcon from "./ButtonLinkIcon.astro";
+---
+
+<section class="h-auto pt-20">
+  <TitleSection title="Empecemos" />
+  <div class="flex flex-row gap-16 w-full">
+    <Icon name="contact" width={200} height={200} />
+    <div class="flex flex-1 flex-col gap-10">
+      <p>¡Convierte tu visión web en realidad!</p>
+      <p>
+        ¿Tienes una idea emocionante para tu sitio web, pero necesitas la ayuda
+        de un experto para hacerla realidad? Estoy aquí para ayudarte.
+      </p>
+      <div class="flex justify-between">
+        <div class="flex-1">
+          <ButtonLinkIcon
+            icon="linkedIn"
+            url="https://www.linkedin.com/in/lernesto"
+            text="LinkedIn"
+          />
+        </div>
+        <div class="flex-1 flex justify-center">
+          <ButtonLinkIcon
+            icon="email"
+            url="mailto:contacto@lernesto.net?subject=Primer%20contacto&body=Quiero%20trabajar%20contigo"
+            text="Correo"
+          />
+        </div>
+        <div class="flex-1 flex justify-end">
+          <ButtonLinkIcon
+            icon="github"
+            url="https://github.com/lernesto-dev/"
+            text="Github"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  p {
+    font-family: "Noto Sans TC Variable", sans-serif;
+    font-size: 16px;
+    color: #f3f0ed;
+  }
+</style>
