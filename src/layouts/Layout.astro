@@ -1,23 +1,45 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Ernesto dev</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Ernesto dev</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-		background-color: #090807;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #090807;
+  }
+  :root {
+  }
+  /* Works on Firefox */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #c21d03 #35616900;
+	border-radius: 20px;
+  }
+
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #35616900;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #c21d03; 
+    border-radius: 20px;
+  }
 </style>
