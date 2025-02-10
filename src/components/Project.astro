@@ -26,22 +26,9 @@ const projects = [
 ];
 ---
 
-<section id="project" class="h-auto pt-20">
+<section id="project" class="h-auto pt-24">
   <TitleSection title="Proyectos" />
   <div class="flex flex-col gap-16 w-full">
-    {
-      projects.map((project) => (
-        <ProjectCard
-          title={project.title}
-          details={project.details}
-          img={project.img}
-          url={project.url}
-          showGithub={project.showGithub}
-          github={project.github}
-          icons={project.icons}
-        />
-      ))
-    }
     {
       projects.map((project) => (
         <ProjectCard
