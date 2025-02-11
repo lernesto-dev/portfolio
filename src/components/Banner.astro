@@ -15,7 +15,7 @@ import { Icon } from "astro-icon/components";
     <BtnDownload />
   </div>
   <div class="w-full flex justify-end">
-    <Icon name="banner" width={472} height={357} />
+    <Icon name="banner" width={472} height={357} class='img-banner'/>
   </div>
 </section>
 
@@ -25,5 +25,32 @@ import { Icon } from "astro-icon/components";
   }
   p {
     font-family: "Noto Sans TC Variable", sans-serif;
+  }
+
+  @media (max-width: 968px) {
+    section{
+      width: 95%;
+      margin: 0 auto;
+    }
+  }
+  @media (max-width: 768px) {
+    section{
+      width: 80%;
+      margin: auto;
+    }
+    section > div{
+      width: 80%;
+    }
+    h1{
+      font-size: 42px;
+    }
+    .img-banner{
+      width: 300px;
+    }
+  }
+  @media (max-width: 642px) {
+    section > div{
+      width: 90%;
+    }
   }
 </style>
