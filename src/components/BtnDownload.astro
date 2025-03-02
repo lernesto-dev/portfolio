@@ -1,4 +1,4 @@
-<button class="button z-[5]" type="button">
+<button class="button z-[5]" type="button" id="btn-cv">
   <span class="button__text">Download</span>
   <span class="button__icon"
     ><svg
@@ -17,6 +17,13 @@
     ></span
   >
 </button>
+
+<script>
+  const btnDownoladCV = document.getElementById('btn-cv')
+  btnDownoladCV?.addEventListener('click', () => {
+    window.location.href = '/luis-ernesto-cv.pdf'
+  })
+</script>
 
 <style>
   .button {
