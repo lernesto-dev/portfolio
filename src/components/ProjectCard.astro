@@ -7,14 +7,22 @@ const { title, details, img, url, icons, github, showGithub } = Astro.props;
 ---
 
 <div class="flex gap-8 w-full card-container">
-  <Image src={img} alt="Unsonu" width={424} height={269} class="img-card-project" />
+  <Image
+    src={img}
+    alt="Unsonu"
+    width={424}
+    height={269}
+    class="img-card-project rounded-xl"
+  />
   <div class="text-[#F3F0ED] h-[269] flex flex-col justify-between">
     <div>
       <h3 class="title-card-project mb-4">{title}</h3>
       <div class="flex gap-2 mb-4">
-        {icons.map((icon: string) => (
-          <Icon name={icon} width={24} height={24} />
-        ))}
+        {
+          icons.map((icon: string) => (
+            <Icon name={icon} width={24} height={24} />
+          ))
+        }
       </div>
       <p>
         {details}
@@ -22,13 +30,7 @@ const { title, details, img, url, icons, github, showGithub } = Astro.props;
     </div>
 
     <div class="flex gap-5 justify-end w-full bg-">
-      {showGithub && (
-        <ButtonLink
-          text="Github"
-          url={github}
-          icon="github"
-        />
-      )}
+      {showGithub && <ButtonLink text="Github" url={github} icon="github" />}
       <ButtonLink text="Visitar" url={url} icon="link" />
     </div>
   </div>
@@ -46,23 +48,23 @@ const { title, details, img, url, icons, github, showGithub } = Astro.props;
   }
 
   @media (max-width: 968px) {
-    .card-container{
+    .card-container {
       width: 95%;
       margin: 0 auto;
     }
-    .card-container .img-card-project{
+    .card-container .img-card-project {
       width: 340px;
     }
   }
   @media (max-width: 768px) {
-    .card-container{
+    .card-container {
       flex-direction: column;
       align-items: center;
     }
-    .card-container .img-card-project{
+    .card-container .img-card-project {
       width: 80%;
     }
-    .card-container > div{
+    .card-container > div {
       width: 80%;
       gap: 25px;
     }

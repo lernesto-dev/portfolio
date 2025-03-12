@@ -7,7 +7,7 @@ const projects = [
     title: "Unsonu",
     details:
       "Landig page de una plataforma que te ayuda a visualizar todos tus archivos de tus diferentes nubes, en una sola plataforma de forma facil y rapida.",
-    img: import("../assets/unsonu.png"),
+    img: import("../assets/unsonu.webp"),
     url: "https://unsonu.netlify.app",
     showGithub: false,
     github: "",
@@ -17,11 +17,21 @@ const projects = [
     title: "Bienes raices",
     details:
       "Proyecto de practica, de una plataforma en la cual se pueden publicar casas en venta y se comunican mediante un correo, con una pagina principal en la cual los clientes pueden ver las distintas casas que estan disponibles.",
-    img: import("../assets/bienesraices.png"),
+    img: import("../assets/bienesraices.webp"),
     url: "https://bienesraices.lernesto.net",
     showGithub: true,
     github: "https://github.com/lernesto-dev/bienesraices-mvc",
     icons: ["php", "html", "js", "css"],
+  },
+  {
+    title: "Tomatl",
+    details:
+      "Landing page y plataforma para mejorar la productividad de el trabajo implementando la tecnica pomodoro y una pequeña gestión de tareas.",
+    img: import("../assets/tomatl.webp"),
+    url: "https://tomatl.vercel.app",
+    showGithub: true,
+    github: "https://github.com/lernesto-dev/tomatl-landing",
+    icons: ["astro", "html", "js", "css"],
   },
 ];
 ---
@@ -47,11 +57,11 @@ const projects = [
 
 <style>
   @media (max-width: 968px) {
-    section{
+    section {
       width: 95%;
       margin: 0 auto;
     }
-    section > div{
+    section > div {
       gap: 25px;
     }
   }
