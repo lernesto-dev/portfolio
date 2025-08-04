@@ -1,5 +1,5 @@
 <button class="button z-[5]" type="button" id="btn-cv">
-  <span class="button__text">Download</span>
+  <span class="button__text">Descargar CV</span>
   <span class="button__icon"
     ><svg
       xmlns="http://www.w3.org/2000/svg"
@@ -19,16 +19,16 @@
 </button>
 
 <script>
-  const btnDownoladCV = document.getElementById('btn-cv')
-  btnDownoladCV?.addEventListener('click', () => {
-    window.location.href = '/luis-ernesto-cv.pdf'
-  })
+  const btnDownoladCV = document.getElementById("btn-cv");
+  btnDownoladCV?.addEventListener("click", () => {
+    window.open("/luis-ernesto-cv.pdf", "_blank");
+  });
 </script>
 
 <style>
   .button {
     position: relative;
-    width: 150px;
+    width: 170px;
     height: 40px;
     cursor: pointer;
     display: flex;
@@ -52,7 +52,7 @@
 
   .button .button__icon {
     position: absolute;
-    transform: translateX(109px);
+    transform: translateX(129px);
     height: 100%;
     width: 39px;
     background-color: #821200;
@@ -75,7 +75,7 @@
   }
 
   .button:hover .button__icon {
-    width: 148px;
+    width: 168px;
     transform: translateX(0);
   }
 
