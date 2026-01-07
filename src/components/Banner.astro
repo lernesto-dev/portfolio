@@ -3,7 +3,10 @@ import BtnDownload from "./BtnDownload.astro";
 import { Icon } from "astro-icon/components";
 ---
 
-<section id="start" class="h-full flex justify-center flex-col gap-4 pt-[100px]">
+<section
+  id="start"
+  class="h-full flex justify-center flex-col gap-4 pt-[100px]"
+>
   <div class="w-4/6 gap-5 flex flex-col items-start">
     <h1 class="text-6xl text-6xl text-[#70979A] title-banner">
       Desarrollador Full Stack
@@ -12,10 +15,9 @@ import { Icon } from "astro-icon/components";
       Haz realidad tus ideas web con un experto en desarrollo freelance a tu
       lado, listo para convertir tus sueños digitales en realidad.
     </p>
-    <BtnDownload />
   </div>
   <div class="w-full flex justify-end">
-    <Icon name="banner" width={472} height={357} class='img-banner'/>
+    <Icon name="banner" width={472} height={357} class="img-banner" />
   </div>
 </section>
 
@@ -28,32 +30,32 @@ import { Icon } from "astro-icon/components";
   }
 
   @media (max-width: 968px) {
-    section{
+    section {
       width: 95%;
       margin: 0 auto;
     }
   }
   @media (max-width: 768px) {
-    section{
+    section {
       width: 80%;
       margin: auto;
       justify-content: center;
       align-items: center;
       gap: 0px;
     }
-    section > div{
+    section > div {
       width: 80%;
       margin: auto;
     }
-    h1{
+    h1 {
       font-size: 42px;
     }
-    .img-banner{
+    .img-banner {
       width: 300px;
     }
   }
   @media (max-width: 642px) {
-    section > div{
+    section > div {
       width: 90%;
       margin: auto;
     }
