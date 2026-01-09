@@ -12,7 +12,7 @@ import Header from "../components/Header.astro";
 ---
 
 <Layout>
-  <Header/>
+  <Header />
   <Container>
     <Banner />
   </Container>
@@ -26,10 +26,16 @@ import Header from "../components/Header.astro";
     <Service />
   </Container>
   <Container h="h-auto mt-20 mb-20">
-	<Contact />
+    <Contact />
   </Container>
   <footer><p class="footer-text">Desarrollado por Luis Ernesto 2025</p></footer>
 </Layout>
+
+<script>
+  let footerText = document.querySelector(".footer-text") as HTMLElement;
+  footerText.innerHTML =
+    "Desarrollado por Luis Ernesto " + new Date().getFullYear();
+</script>
 
 <style>
   footer {
