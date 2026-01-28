@@ -12,6 +12,7 @@ const projects = [
     showGithub: false,
     github: "",
     icons: ["astro", "html", "js", "css"],
+    showLink: true,
   },
   {
     title: "Bienes raices",
@@ -22,16 +23,18 @@ const projects = [
     showGithub: true,
     github: "https://github.com/lernesto-dev/bienesraices-mvc",
     icons: ["php", "html", "js", "css"],
+    showLink: false,
   },
   {
     title: "Tomatl",
     details:
       "Landing page y plataforma para mejorar la productividad de el trabajo implementando la tecnica pomodoro y una pequeña gestión de tareas.",
     img: import("../assets/tomatl.webp"),
-    url: "https://tomatl.vercel.app",
+    url: "https://tomatl.site",
     showGithub: true,
     github: "https://github.com/lernesto-dev/tomatl-landing",
     icons: ["astro", "html", "js", "css"],
+    showLink: true,
   },
 ];
 ---
@@ -49,6 +52,7 @@ const projects = [
           showGithub={project.showGithub}
           github={project.github}
           icons={project.icons}
+          showLink={project.showLink}
         />
       ))
     }

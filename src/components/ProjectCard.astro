@@ -3,7 +3,8 @@ import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import ButtonLink from "./ButtonLink.astro";
 
-const { title, details, img, url, icons, github, showGithub } = Astro.props;
+const { title, details, img, url, icons, github, showGithub, showLink } =
+  Astro.props;
 ---
 
 <div class="flex gap-8 w-full card-container">
@@ -31,7 +32,7 @@ const { title, details, img, url, icons, github, showGithub } = Astro.props;
 
     <div class="flex gap-5 justify-end w-full bg-">
       {showGithub && <ButtonLink text="Github" url={github} icon="github" />}
-      <ButtonLink text="Visitar" url={url} icon="link" />
+      {showLink && <ButtonLink text="Visitar" url={url} icon="link" />}
     </div>
   </div>
 </div>
